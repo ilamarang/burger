@@ -10,6 +10,9 @@ router.get('/', function (req, res) {
 
 router.get('/index', function (req, res) {
   burger.selectAll(function(data) {
+    var burgerObject = {burger : data};
+    console.log(burgerObject);
+    res.render('index', burgerObject);
   console.log('Hello Data is here');
   });
 });
